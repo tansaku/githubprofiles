@@ -10,37 +10,32 @@
     </form>
 
     <div class='profile-container'>
-
-    </div>
-
-    <template id='profile-template'>
       <div class="profile">
         <div class="left">
-          <img src="{{ avatar_url }}">
+          <img src="https://avatars.githubusercontent.com/u/30216?">
         </div>
 
         <div class="right">
           <h3>
-            <a href="{{ html_url }}">
-              {{ login }}
+            <a href="https://github.com/tansaku">
+              tansaku
             </a>
           </h3>
-          <h4>Repos: {{ public_repos }}</h4>
-          <h4>Followers: {{ followers }}</h4>
+          <h4>Repos: 143</h4>
+          <h4>Followers: 77</h4>
         </div>
         <br clear="all">
       </div>
+    </div>
+
+    <template id='profile-template'>
+      
     </template>
 
     <script src='https://code.jquery.com/jquery-2.0.3.min.js'></script>
     <script src='mustache.js'></script>
     <script>
-      $(document).ready(function(){
-        $.get('https://api.github.com/users/josephwolf', function(user){
-          var newProfile = Mustache.render($('#profile-template').html(), user);
-          $('.profile-container').append(newProfile);
-        })
-      });
+
     </script>
   </body>
 </html>
